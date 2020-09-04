@@ -1,8 +1,5 @@
 Configuración del Entorno de Trabajo
 
-Instrucciones
-Tanto el equipo de bloque como el de la clase tendrán que analizar las herramientas y plataformas disponibles en el mercado para realizar lo siguiente:
-
 Seleccionar y configurar una plataforma que permita la comunicación interna entre los integrantes del equipo. 
 
  Whatsapp para comunicación directa, ya que solo somos 2 personas.
