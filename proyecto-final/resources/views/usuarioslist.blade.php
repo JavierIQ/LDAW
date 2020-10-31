@@ -1,6 +1,6 @@
 
 <div class="card mb-3">
-  <img src="https://wallpapercave.com/wp/wp3660116.jpg" class="card-img-top" style= "height:300px;width:100%" alt="...">
+  <img src="https://wallpapercave.com/wp/wp3660116.jpg" class="card-img-top" style= "height:250px;width:100%" alt="...">
   <div class="card-body">
       <h5 class="card-title">Lista de titulos</h5>
       <p class="card-text">Todos los títulos se encuentran aqui</p>

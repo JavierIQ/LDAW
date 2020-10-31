@@ -178,32 +178,29 @@
     
     @elseif($layout == 'edit')
         <div class = 'container-fluid'>
-            <div class="row">
-                <section class="col">
-                    <form  action ="{{url('/update/'.$usuario->id)}}" method="put">
-                        @csrf
-                        <div class="form-group">
-                          <label >First name</label>
-                          <input value = "{{$usuario->firstName}}" name = "firstName" type="text" class="form-control"  placeholder="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label >Second name</label>
-                            <input  value = "{{$usuario->secondName}}" name = "secondName" type="text" class="form-control"  placeholder="secondName">
-                          </div>
+            <div class="card mb-3">
+                <img src="https://wallpapercave.com/wp/wp3660106.jpg" style= "height:250px;width:100%;margin-top:10px" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Editar títulos</h5>
+            <form  action ="{{url('/update/'.$usuario->id)}}" method="put">
+                @csrf
+                <div class="form-group">
+                  <label >Nombre</label>
+                  <input value = "{{$usuario->firstName}}" name = "firstName" type="text" class="form-control"  placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label >Versión</label>
+                    <input value = "{{$usuario->secondName}}"  name = "secondName" type="text" class="form-control"  placeholder="Version">
+                  </div>
 
-                          
-
-                          <div class="form-group">
-                            <label >Speciality</label>
-                            <input  value = "{{$usuario->speciality}}" name = "speciality" type="text" class="form-control"  placeholder="speciality">
-                          </div>
-                        
-                          <input type = "submit" class="btn btn-info" value = "Update">
-                      </form>
-
-
-
-                </section>
+                  <div class="form-group">
+                    <label >Edición</label>
+                    <input value = "{{$usuario->speciality}}"  name = "speciality" type="text" class="form-control"  placeholder="edicion">
+                  </div>
+                
+                  <input type = "submit" class="btn btn-info" value = "Editar Título">
+              </form>
+                </div>
             </div>
         </div>
 
