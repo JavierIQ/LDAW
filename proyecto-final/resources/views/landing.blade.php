@@ -7,19 +7,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/slicknav.css')}}">
-	<link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
-	<link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-	<link rel="stylesheet" href="{{asset('css/fontawesome-all.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/themify-icons.css')}}">
-	<link rel="stylesheet" href="{{asset('css/slick.css')}}">
-	<link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url('css/style.css')}}" />
+    <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{url('css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url('css/slicknav.css')}}">
+	<link rel="stylesheet" href="{{url('css/flaticon.css')}}">
+	<link rel="stylesheet" href="{{url('css/animate.min.css')}}">
+	<link rel="stylesheet" href="{{url('css/magnific-popup.css')}}">
+	<link rel="stylesheet" href="{{url('css/fontawesome-all.min.css')}}">
+	<link rel="stylesheet" href="{{url('css/themify-icons.css')}}">
+	<link rel="stylesheet" href="{{url('css/slick.css')}}">
+	<link rel="stylesheet" href="{{url('css/nice-select.css')}}">
     <title>Sistema</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
@@ -94,6 +95,13 @@
             background:#00c9b7 ;
         }
 
+        @media (max-width: 767px) {
+        
+           #imagen-seccion{
+                width: 100%;
+            }
+        }
+
 
 
     </style>
@@ -104,7 +112,7 @@
 
 
   <body>
-    <div class="slider-area " style= "background-image: url(/img/fondo_inicio.jpg);">
+    <div class="slider-area " style= "background: url(/img/fondo_landing.jpg) no-repeat center center fixed;background-size:cover;">
         <div class="slider-active">
             <!-- Single Slider -->
             <div class="single-slider slider-height d-flex align-items-center" style = "height: 550px;">
@@ -112,12 +120,12 @@
                     <div class="row">
                         <div class="col-xl-8 col-lg-7 col-md-8">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".1s">Cambio Game</span>
-                                <h1 data-animation="fadeInLeft" data-delay=".5s" >Publica tu juego</h1>
-                                <p data-animation="fadeInLeft" data-delay=".9s">¡Tenemos miles de juegos para intercambios, visitanos!</p>
+                                <span data-animation="fadeInLeft" data-delay=".1s" style = "color:white;">Cambio Game</span>
+                                <h1 data-animation="fadeInLeft" data-delay=".5s" style = "color:white;" >Publica tu juego</h1>
+                                <p data-animation="fadeInLeft" data-delay=".9s" style = "color:white;">¡Tenemos miles de juegos para intercambios, visitanos!</p>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
-                                    <a href="/login" class="btn hero-btn">Registrate</a>
+                                    <a href="/login" class="btn hero-btn" style = "color:white;">Registrate</a>
                                 </div>
                             </div>
                         </div>
@@ -142,10 +150,10 @@
                 <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <i class="fas fa-user" style="font-size: 50px;margin-bottom: 10px;"></i>
+                            <i class="fa fa-cloud" style="font-size: 50px;margin-bottom: 10px"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="#">Busca tu juego favorito</a></h5>
+                            <h5><a >Busca tu juego favorito</a></h5>
                         </div>
                     </div>
                 </div>
@@ -155,7 +163,7 @@
                             <i class="fas fa-building" style="font-size: 50px;margin-bottom: 10px;"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Selecciona el juego de intercambio</a></h5>
+                            <h5><a >Selecciona el juego de intercambio</a></h5>
                         </div>
                     </div>
                 </div>
@@ -165,7 +173,7 @@
                             <i class="fas fa-plane" style="font-size: 50px;margin-bottom: 10px;"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Manda la solicitud</a></h5>
+                            <h5><a>Manda la solicitud</a></h5>
                         </div>
                     </div>
                 </div>
@@ -175,19 +183,19 @@
                             <i class="fas fa-cube" style="font-size: 50px;margin-bottom: 10px;"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Juego intercambiado!</a></h5>
+                            <h5><a>Juego intercambiado!</a></h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="support-company-area pt-100 pb-100 section-bg fix" data-background="assets/img/gallery/section_bg02.jpg">
+    <div class="support-company-area pt-100 pb-100 section-bg fix" >
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
-                    <div class="support-location-img">
-                        <img src="/img/fondo_inicio.jpg" alt="">
+                    <div class="support-location-img" style="">
+                        <img  id= "imagen-seccion" src="/img/fondo_inicio.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
@@ -209,26 +217,23 @@
 
     <footer>
         <!--? Footer Start-->
-        <div class="footer-area section-bg" data-background="/img/fondo_inicio.jpg">
+        <div class="footer-area section-bg" style="background: url(/img/fondo_landing.jpg) no-repeat center center fixed;background-size:cover;width:100%">
             <div class="container">
                 <div class="footer-top footer-padding">
                     <div class="row d-flex justify-content-between">
-                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
                             <div class="single-footer-caption mb-50">
                                 <!-- logo -->
                                 <div class="footer-tittle">
-                                    <h4>Contacto </h4>
+                                    <h4 style="color:white">Contacto </h4>
                                     <div class="footer-pera">
-                                        <p class="info1">Recibe información sobre nuestros servicios </p>
+                                        <p class="info1"  style="color:white">Recibe información sobre nuestros servicios </p>
                                     </div>
                                 </div>
                                 <div class="footer-number">
-                                    <h4><span>+521 </span>55 5068 1644</h4>
-                                    <h4><span>+521 </span>55 3996 2755</h4>
-                                    <p>contacto@cambiogamer.com</p>
+                                    <h4  style="color:white"><span>+521 </span>55 5068 1644</h4>
+                                    <p  style="color:white">contacto@progamers.com</p>
                                 </div>
                             </div>
-                        </div>
                        
                     </div>
                 </div>
