@@ -7,6 +7,7 @@
         <div class="navbar-nav">
             <a class="nav-item nav-link active"  href="{{url('/')}}">Inicio<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link " href="{{url('/login')}}">Iniciar sesíon</a>
+            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
 
         </div>
     </div>

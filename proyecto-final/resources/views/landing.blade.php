@@ -7,7 +7,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('css/style.css')}}" />
@@ -150,7 +149,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <i class="fa fa-cloud" style="font-size: 50px;margin-bottom: 10px"></i>
+                            <h5>1</h5>
                         </div>
                         <div class="cat-cap">
                             <h5><a >Busca tu juego favorito</a></h5>
@@ -160,7 +159,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <i class="fas fa-building" style="font-size: 50px;margin-bottom: 10px;"></i>
+                            <h5>2</h5>
                         </div>
                         <div class="cat-cap">
                             <h5><a >Selecciona el juego de intercambio</a></h5>
@@ -170,7 +169,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-4">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <i class="fas fa-plane" style="font-size: 50px;margin-bottom: 10px;"></i>
+                            <h5>3</h5>
                         </div>
                         <div class="cat-cap">
                             <h5><a>Manda la solicitud</a></h5>
@@ -180,7 +179,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-4">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <i class="fas fa-cube" style="font-size: 50px;margin-bottom: 10px;"></i>
+                            <h5>4</h5>
                         </div>
                         <div class="cat-cap">
                             <h5><a>Juego intercambiado!</a></h5>

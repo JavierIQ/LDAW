@@ -5,9 +5,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active"  href="{{url('/administrador')}}">Títulos <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link " href="{{url('/administrador/create')}}">Crear Títulos</a>
-            <a class="nav-item nav-link " href="{{url('/administrador/solicitudes')}}">Solicitudes de títulos</a>
+            <a class="nav-item nav-link active"  href="{{url('/administrador')}}">Juegos<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link " href="{{url('/administrador/create')}}">Mis solicitudes</a>
+            <a class="nav-item nav-link " href="{{url('/administrador/solicitudes')}}">Mi perfil</a>
             <a class="nav-item nav-link "href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">

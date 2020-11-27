@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TitleController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +36,9 @@ Route::get('/',"App\Http\Controllers\MainController@index");
 Route::get('/login',"App\Http\Controllers\MainController@login");
 
 
+
+Auth::routes();
+
+Route::get('/admin',[App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin');
+Route::get('/user',[App\Http\Controllers\UserController::class, 'index'])->name('user')->middleware('user');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

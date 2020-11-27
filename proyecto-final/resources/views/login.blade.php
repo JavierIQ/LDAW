@@ -25,7 +25,7 @@
 
 
 
-   <form method="post" action="{{ url('/main/checklogin') }}">
+   <form method="POST" action="{{ route('login') }}">
    
     <div class="form-group">
      <label>Enter Email</label>
@@ -35,8 +35,19 @@
      <label>Enter Password</label>
      <input type="password" name="password" class="form-control" />
     </div>
+    <div class="form-group row">
+        <div class="col-md-6 offset-md-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                <label class="form-check-label" for="remember">
+                    {{ __('Remember Me') }}
+                </label>
+            </div>
+        </div>
+    </div>
     <div class="form-group">
-     <input type="submit" name="login" class="btn btn-primary" value="Login" />
+     <input type="submit" class="btn btn-primary" value="Login" />
     </div>
    </form>
   </div>
