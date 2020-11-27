@@ -6,6 +6,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,10 @@ Route::get('/administrador/destroy/{id}',"App\Http\Controllers\TitleController@d
 Route::get('/administrador/solicitudes',"App\Http\Controllers\TitleController@solicitudes");
 Route::get('/administrador/aceptar/{id}',"App\Http\Controllers\TitleController@aceptar");
 Route::get('/administrador/rechazar/{id}',"App\Http\Controllers\TitleController@rechazar");
+
+
+Route::get('/juegos',"App\Http\Controllers\GameController@index");
+Route::get('/juegos/visualizar/{id}',"App\Http\Controllers\GameController@visualizar");
 
 Route::get('/',"App\Http\Controllers\MainController@index");
 Route::get('/login',"App\Http\Controllers\MainController@login");
