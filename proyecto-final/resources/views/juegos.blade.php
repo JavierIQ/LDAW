@@ -70,72 +70,46 @@
                     </div>
 
         </div>
-    @elseif($layout == 'show')
-        <div class = 'container-fluid'>
-            <div class="row">
-                <section class="col">
-                    <br>
-                    <table class="table">
-                        <thead class="thead-light">
-                          <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Matricula</th>
-                            <th scope="col">Descrpición</th>
-                            <th scope="col">Foto</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                           
-                            <tr>
-                                <td>Kevin Woolfolk</td>
-                                <td>A01251809</td>
-                                <td>Mi experiencia en web es practicamente manejar sistemas web con html,css,js,php y mysql</td>
-                                <td>
-                                    <img src="/img/kevin.jpg" style= "height:150px;width:150px;" class="card-img-top" alt="...">  
-                              </td>
-                            </tr>
-                            <tr>
-                                <td>Javier Iñiguez</td>
-                                <td>A01366111</td>
-                                <td>Mi experiencia es súper básica, solo he usado HTML, css, js, y framework Bootstrap y materialize, solo he estado en front.</td>
-                                <td>
-                                    <img src="/img/javier.jpg" style= "height:150px;width:150px;" class="card-img-top" alt="...">  
-                              </td>
-                            </tr>
-                    
-                        </tbody>
-                      </table>
-
-
+    @elseif($layout == 'screen')
+    <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4">
+            <div class="row justify-content-center">
+                <section class="col-md-8">
+                    @include("screen")
                 </section>
             </div>
         </div>
+    </div>
     
     @elseif($layout == 'visualizar')
-        <div class = 'container-fluid'>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Visualizar Juegos</h5>
-            <form  action ="{{url('administrador/update/'.$title->id)}}" method="put">
-                @csrf
-                <div class="form-group">
-                  <label >Nombre</label>
-                  <input value = "{{$title->name}}" name = "name" type="text" class="form-control"  placeholder="Nombre">
-                </div>
-                <div class="form-group">
-                    <label >Versión</label>
-                    <input value = "{{$title->version}}"  name = "version" type="text" class="form-control"  placeholder="Version">
-                  </div>
-
-                  <div class="form-group">
-                    <label >Edición</label>
-                    <input value = "{{$title->edition}}"  name = "edition" type="text" class="form-control"  placeholder="edicion">
-                  </div>
-                
-                  <input type = "submit" class="btn btn-info" value = "Editar Título">
-              </form>
-                </div>
-            </div>
+        <div class="card mb-3">
+            <div class="card-body">
+            <h5 class="card-title">Lista de juegos</h5>
+        
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Consola</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Visualizar</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach($games as $game)
+                <tr>
+                    <td>{{$game->name}}</td>
+                    <td>{{$game->console}}</td>
+                    <td>{{$game->detail}}</td>
+                    <td>
+                        <a href="{{ url('juegos/screen/'.$game->id) }}" class="btn btn-sm btn-warning">Visualizar</a> 
+                    </td>
+                </tr>
+                @endforeach
+        
+            </tbody>
+        </table>
+        </div>
         </div>
 
         

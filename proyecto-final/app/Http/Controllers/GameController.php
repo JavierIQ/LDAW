@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\Game;
+use App\Models\Reviews;
 use App\Models\Title;
 use Auth;
 use Illuminate\Http\Request;
@@ -15,9 +16,8 @@ class GameController extends Controller
     }
 
     public function visualizar($id){
-        $title = Title::find($id);
-        $titles = Title::all();
-        return view('juegos',['titles'=>$titles,'title'=>$title,'layout'=>'visualizar']);
+        $games = DB::select("SELECT * FROM game where idTitle= $id");
+        return view('juegos',['games'=>$games,'layout'=>'visualizar']);
     }
 
     public function publicaciones(){
@@ -75,6 +75,28 @@ class GameController extends Controller
             $titles = DB::select("SELECT * FROM titles where estatus = 'aceptado'");
             $Games = Game::all();
             return view('publicaciones',['titles'=>$titles,'tituloId'=>$titleId,'game'=>$Game,'layout'=>'edit']);
+        }
+
+        public function comentar(Request $request){
+            $reviews = new Reviews();
+            $reviews ->detail = $request->input('detail');
+            $userId = Auth::id();
+            $reviews ->idTitle = $request->input('idTitulo');
+            $reviews ->idUsuario = $userId;
+            $reviews ->save();
+            return redirect()->back()->with('success', true);
+        }
+        public function screen($id){
+            $Game = Game::find($id);
+            $userId = Auth::id();
+            $reviews = DB::select("SELECT * FROM reviews");
+            $users = DB::select("SELECT * FROM users");
+            return view('juegos',['game'=>$Game,'reviews'=>$reviews,'users'=>$users,'userId' => $userId,'layout'=>'screen']);
+        }
+        public function destroyComentario($id){
+            $reviews= Reviews::find($id);
+            $reviews-> delete();
+            return redirect()->back()->with('success', true);
         }
     
         public function destroyJuegos($id){
