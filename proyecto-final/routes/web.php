@@ -36,6 +36,14 @@ Route::get('/administrador/rechazar/{id}',"App\Http\Controllers\TitleController@
 
 Route::get('/juegos',"App\Http\Controllers\GameController@index");
 Route::get('/juegos/visualizar/{id}',"App\Http\Controllers\GameController@visualizar");
+Route::get('/publicaciones',"App\Http\Controllers\GameController@publicaciones");
+Route::get('/crearjuegos',"App\Http\Controllers\GameController@createjuegos");
+Route::get('/crear',"App\Http\Controllers\GameController@create");
+Route::get('/misjuegos',"App\Http\Controllers\GameController@misjuegos");
+Route::get('/publicaciones/solicitud',"App\Http\Controllers\GameController@store");
+Route::get('/misjuegos/update/{id}',"App\Http\Controllers\GameController@updateJuegos");
+Route::get('/misjuegos/destroy/{id}',"App\Http\Controllers\GameController@destroyJuegos");
+Route::get('/misjuegos/edit/{id}',"App\Http\Controllers\GameController@editJuegos");
 
 Route::get('/',"App\Http\Controllers\MainController@index");
 Route::get('/login',"App\Http\Controllers\MainController@login");

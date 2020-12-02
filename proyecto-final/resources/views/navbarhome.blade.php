@@ -6,8 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active"  href="{{url('/juegos')}}">Juegos<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link " href="{{url('/administrador/create')}}">Ofertas</a>
-            <a class="nav-item nav-link " href="{{url('/administrador/create')}}">Publicaciones</a>
+            <a class="nav-item nav-link " href="{{url('/juegos')}}">Ofertas</a>
+            <a class="nav-item nav-link " href="{{url('/publicaciones')}}">Solicitar título</a>
+            <a class="nav-item nav-link " href="{{url('/crear')}}">Crear juegos</a>
+            <a class="nav-item nav-link " href="{{url('/misjuegos')}}">Mis juegos</a>
             <a class="nav-item nav-link "href="{{ route('logout') }}"
             onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
