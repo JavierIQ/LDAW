@@ -55,6 +55,12 @@ Route::get('/misjuegos/edit/{id}',"App\Http\Controllers\GameController@editJuego
 Route::get('/',"App\Http\Controllers\MainController@index");
 Route::get('/login',"App\Http\Controllers\MainController@login");
 
+Route::get('/ofertas/aceptar/{id}',"App\Http\Controllers\GameController@aceptar");
+Route::get('/ofertas/rechazar/{id}',"App\Http\Controllers\GameController@rechazar");
+
+
+
+
 
 
 Auth::routes();

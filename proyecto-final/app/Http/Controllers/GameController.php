@@ -48,11 +48,12 @@ class GameController extends Controller
 
         public function createjuegos(Request $request){
             $game = new Game();
+            $userId = Auth::id();
             $game ->name = $request->input('name');
             $game ->console = $request->input('consola');
             $game ->detail = $request->input('detail');
             $game ->idTitle = $request->input('idTitulo');
-            $game ->idUsuario = $request->input('userId');
+            $game ->idUsuario =$userId;
             $game ->save();
             return redirect('/misjuegos');
         }
@@ -131,5 +132,19 @@ class GameController extends Controller
             $game= Game::find($id);
             $game-> delete();
             return redirect('/misjuegos');
+        }
+
+        public function aceptar($id){
+            $oferta = Oferta::find($id);
+            $oferta ->estatus ="aceptado";
+            $oferta ->save();
+            return redirect('/ofertas');
+        }
+    
+        public function rechazar($id){
+            $oferta = Oferta::find($id);
+            $oferta ->estatus ="rechazado";
+            $oferta ->save();
+            return redirect('/ofertas');
         }
 }
