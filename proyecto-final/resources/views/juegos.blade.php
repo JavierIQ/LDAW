@@ -80,6 +80,17 @@
             </div>
         </div>
     </div>
+
+    @elseif($layout == 'ofertas')
+    <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4">
+            <div class="row justify-content-center">
+                <section class="col-md-8">
+                    @include("ofertaslist")
+                </section>
+            </div>
+        </div>
+    </div>
     
     @elseif($layout == 'visualizar')
         <div class="card mb-3">

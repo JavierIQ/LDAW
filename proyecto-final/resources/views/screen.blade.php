@@ -15,11 +15,22 @@
 
               
               
+              <form  action ="{{url('crearOferta')}}" method="put">
+                @csrf
+                  <div class="form-group">
+                    <textarea name = "descripcion" type="text" class="form-control"  placeholder="Mensaje"></textarea>
+                  </div>
 
-              <input type = "submit" class="btn btn-info" value = "Intercambiar">
+                  <input type = "text" name='idTitulo' style="display: none" value = "{{$game->id}}">
+                  <input type = "text" name='idUsuario' style="display: none" value = "{{$game->idUsuario}}">
+
+                
+                  <input type = "submit" class="btn btn-info" value = "Intercambiar">
+              </form>
+              
 
 
-              <br><br><br>
+              <br>
               <label style="text-align:center;font-size:25px" >Comentarios: </label>
               <div class="form-group">
                 
